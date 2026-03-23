@@ -17,7 +17,7 @@ COPY . .
 EXPOSE 8501
 
 # Configurações de saúde do container (opcional, mas recomendado)
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
+HEALTHCHECK CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health').read()"
 
 # Comando para executar o frontend Streamlit
 ENTRYPOINT ["streamlit", "run", "frontend.py", "--server.port=8501", "--server.address=0.0.0.0"]
