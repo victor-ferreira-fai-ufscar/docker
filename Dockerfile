@@ -15,3 +15,6 @@ COPY . .
 
 # Comando para executar a aplicação
 CMD ["python", "app.py"]
+
+
+VOLUME /app/dados/
