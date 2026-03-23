@@ -24,6 +24,9 @@ EXPOSE 8501
 # Configurações de saúde do container (opcional, mas recomendado)
 HEALTHCHECK CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health').read()"
 
+# Define o volume para persistência ou live-reload
+VOLUME ["/app/volume-1"]
+
 # Comando para executar o frontend Streamlit
 ENTRYPOINT ["streamlit", "run", "frontend.py", "--server.port=8501", "--server.address=0.0.0.0"]
 
