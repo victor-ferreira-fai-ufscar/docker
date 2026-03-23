@@ -1,2 +1,1 @@
-# Liste aqui suas dependências (ex: requests, pandas, flask)
-# Por enquanto o ambiente é básico.
+streamlit
