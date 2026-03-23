@@ -17,4 +17,4 @@ COPY . .
 CMD ["python", "app.py"]
 
 
-VOLUME /app/dados/
+VOLUME /app/dados
