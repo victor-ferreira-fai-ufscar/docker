@@ -26,3 +26,5 @@ HEALTHCHECK CMD python -c "import urllib.request; urllib.request.urlopen('http:/
 
 # Comando para executar o frontend Streamlit
 ENTRYPOINT ["streamlit", "run", "frontend.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+# DATA E HORA ATUAL: 23/03/2026 15:23
